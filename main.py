@@ -208,7 +208,7 @@ CORS(app)
 PORT = 80
 
 
-@app.route("/inactive")
+@app.route("/inactive/")
 def get_inactives():
     try:
         gameworld = request.args.get('gameworld')
