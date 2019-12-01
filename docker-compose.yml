@@ -1,0 +1,9 @@
+version: '3'
+services:
+  finder:
+    image: felixbreuer/travian-inactive-finder
+    build: .
+    network_mode: bridge
+    restart: unless-stopped
+    ports:
+      - 8080:80
