@@ -12,4 +12,7 @@ RUN apk add --update --no-cache --virtual .build-dependencies \
 
 EXPOSE 80
 
+HEALTHCHECK --interval=1m --timeout=3s \
+  CMD curl --fail http://localhost/inactive || exit 1
+
 CMD ["python3", "-u", "main.py"]
